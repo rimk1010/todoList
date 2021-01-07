@@ -15,6 +15,7 @@ const createTodo = todo => {
     todos.innerHTML += html;
 }
 
+
 addButton.addEventListener('click', e => {
     const todo = textContent.value;
     if(todo.length){
@@ -29,6 +30,7 @@ addButton.addEventListener('click', e => {
             if(e.target.classList.contains('done')){
                 const marker = e.target.parentElement.firstElementChild;
                 marker.innerHTML += '←Finished!!!'
+                marker.classList.add('finished');
                 e.target.remove();
             }
         })
